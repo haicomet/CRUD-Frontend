@@ -12,7 +12,7 @@ const AllCampuses = () => {
   }, []);
 
   if (campuses.length === 0) {
-    return <p>No campuses available.</p>;
+    return <p>There are no campuses registered in the database.</p>;
   }
 
   return (
