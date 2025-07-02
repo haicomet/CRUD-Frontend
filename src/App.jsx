@@ -7,6 +7,7 @@ import AllCampuses from "./components/AllCampuses";
 import AllStudents from "./components/AllStudents";
 import SingleStudent from "./components/SingleStudent";
 import SingleCampus from "./components/SingleCampus";
+import AddStudent from "./components/AddStudent";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/students" element={<AllStudents />} />
         <Route path="/campuses/:id" element={<SingleCampus />} />
         <Route path="/students/:id" element={<SingleStudent />} />
+        <Route path="/add-student" element={<AddStudent/>} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </Router>
