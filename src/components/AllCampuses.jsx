@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import axios from "axios";
 
 const AllCampuses = () => {
   const [campuses, setCampuses] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/campuses")
+    axios.get("http://localhost:8080/api/campuses")
       .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campuses:", err));
   }, []);
