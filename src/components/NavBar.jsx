@@ -8,8 +8,8 @@ const Navbar = () => {
       <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
       <Link to="/campuses" style={{ marginRight: "1rem" }}>Campuses</Link>
       <Link to="/students" style={{ marginRight: "1rem" }}>Students</Link>
-      <Link to="/add-student">Add Student</Link>
-
+      <Link to="/add-student" style={{ marginRight: "1rem" }}>Add Student</Link>
+      <Link to="/add-campus">Add Campus</Link>
     </nav>
   );
 };
