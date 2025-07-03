@@ -12,7 +12,7 @@ const AllStudents = () => {
   }, []);
 
   if (students.length === 0) {
-    return <p>No students available.</p>;
+    return <p>There are no students currently enrolled.</p>;
   }
 
   return (
