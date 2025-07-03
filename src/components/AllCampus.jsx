@@ -12,7 +12,7 @@ import axios from "axios";
       .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campuses:", err));
 =======
-  const AllCampus = () => {
+const AllCampus = () => {
   const [campus, setCampus] = useState([]);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ import axios from "axios";
       .get("http://localhost:8080/api/campus")
       .then((res) => setCampus(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
+>>>>>>> cffaea0243b9bd52014485278aaffb51a66729b2
   }, []);
 
   if (campus.length === 0) {
