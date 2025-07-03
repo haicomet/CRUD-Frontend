@@ -24,7 +24,7 @@ const SingleStudent = () => {
       <p>
         <strong>Campus:</strong>{" "}
         {student.campus ? (
-          <Link to={`/campuses/${student.campus.id}`}>{student.campus.name}</Link>
+          <Link to={`/campus/${student.campus.id}`}>{student.campus.name}</Link>
         ) : (
           "Not found"
         )}
