@@ -9,6 +9,7 @@ import AllStudents from "./components/AllStudents";
 import SingleStudent from "./components/SingleStudent";
 import SingleCampus from "./components/SingleCampus";
 import AddStudent from "./components/AddStudent";
+import AddCampus from "./components/addCampus";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/students/:id" element={<SingleStudent />} />
         <Route path="/add-student" element={<AddStudent/>} />
           <Route path="/add-campus" element={<AddCampus/>} />
+        <Route path="/add-campus" element={<AddCampus/>} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
         <Route path="*" element={<h1>All Campus</h1>} />
 
