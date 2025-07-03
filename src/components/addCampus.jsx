@@ -58,10 +58,10 @@ const AddCampus = () => {
                 onChange={handleImage}
                 />
                 <input
-                name="adress"
+                name="address"
                 type="text"
                 required
-                placeholder="adress"
+                placeholder="address"
                 value={address}
                 onChange={handleAddress}
                 />

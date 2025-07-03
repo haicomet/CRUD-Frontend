@@ -6,7 +6,7 @@ const AllCampuses = () => {
   const [campuses, setCampuses] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/campuses")
+    axios.get("http://localhost:8080/api/campus")
       .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campuses:", err));
   }, []);
@@ -22,8 +22,8 @@ const AllCampuses = () => {
         {campuses.map((campus) => (
           <Link key={campus.id} to={`/campuses/${campus.id}`} style={{ textDecoration: "none", color: "inherit" }}>
             <div style={{ border: "1px solid #ccc", padding: "1rem", borderRadius: "8px" }}>
-              <img src={campus.imageUrl} alt={campus.name} style={{ width: "200px", height: "100px", objectFit: "cover" }} />
-              <h3>{campus.name}</h3>
+              <img src={campus.imageUrl} alt={campus.campusName} style={{ width: "200px", height: "100px", objectFit: "cover" }} />
+              <h3>{campus.campusName}</h3>
             </div>
           </Link>
         ))}
