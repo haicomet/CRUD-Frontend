@@ -41,6 +41,7 @@ const AddStudent = () => {
    }
 
     return(
+      <div className="add-student-page">
         <form onSubmit = {handleSubmit} className="new-student-form">
             <input
             name="firstName"
@@ -85,6 +86,7 @@ const AddStudent = () => {
             />
             <button id="submit-button">Add </button>
         </form>
+        </div>
     );
 }
 
