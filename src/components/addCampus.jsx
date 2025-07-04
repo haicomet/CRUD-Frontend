@@ -12,7 +12,7 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post("http://localhost:8080/api/campus", {
+        await axios.post("http://crud-backend-iota-three.vercel.app/api/campus", {
             campusName,
             imageUrl,
             address,

@@ -7,7 +7,7 @@ const AllCampus = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/campus")
+      .get("http://crud-backend-iota-three.vercel.app/api/campus")
       .then((res) => setCampus(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);

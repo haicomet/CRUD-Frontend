@@ -7,7 +7,7 @@ const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    await axios.get("http://localhost:8080/api/students")
+    await axios.get("http://crud-backend-iota-three.vercel.app/api/students")
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));
   };
