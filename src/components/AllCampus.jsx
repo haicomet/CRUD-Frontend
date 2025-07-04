@@ -9,7 +9,7 @@ import axios from "axios";
   useEffect(() => {
     axios.get("http://localhost:8080/api/campus")
       .then((res) => setCampuses(res.data))
-      .catch((err) => console.error("Error fetching campuses:", err));
+      .catch((err) => console.error("Error fetching campus:", err));
   }, []);
 
   if (campus.length === 0) {
