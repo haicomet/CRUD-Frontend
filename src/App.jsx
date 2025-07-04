@@ -11,6 +11,7 @@ import SingleCampus from "./components/SingleCampus";
 import AddStudent from "./components/AddStudent";
 import AddCampus from "./components/addCampus";
 
+
 const App = () => {
   return (
     <Router>

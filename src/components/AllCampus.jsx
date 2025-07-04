@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import axios from "axios";
 
-const AllCampus = () => {
+
+  const AllCampus = () => {
   const [campus, setCampus] = useState([]);
 
   useEffect(() => {

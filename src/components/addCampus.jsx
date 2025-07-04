@@ -1,6 +1,7 @@
 
 import React, {useState} from "react";
 import axios from "axios";
+import './styles/StyleWebsite.css';
 
 const AddCampus = () => {
     const [campusName, setCampusName] = useState('');
@@ -40,12 +41,14 @@ const AddCampus = () => {
     
 
     return (
+        <div className="add-campus-page">
         <form onSubmit = {handleSubmit} className="new-campus-form">
                 <input
+                
                 name="campus name"
                 type="text"
                 required
-                placeholder="campusName"
+                placeholder="Campus Name"
                 value={campusName}
                 onChange={handleCampusName}
                 />
@@ -53,15 +56,16 @@ const AddCampus = () => {
                 name="imageUrl"
                 type="text"
                 required
-                placeholder="image url"
+                placeholder="Add Campus Image"
                 value={imageUrl}
                 onChange={handleImage}
+                
                 />
                 <input
                 name="address"
                 type="text"
                 required
-                placeholder="address"
+                placeholder="Address"
                 value={address}
                 onChange={handleAddress}
                 />
@@ -74,7 +78,9 @@ const AddCampus = () => {
                 />
             
                 <button id="submit-button" type="submit"> Add </button>
+               
             </form>
+             </div>
         );
 }
 

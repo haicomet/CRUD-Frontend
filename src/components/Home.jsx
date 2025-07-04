@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import './styles/StyleWebsite.css';
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <p>
         <Link to="/campus">Campus</Link> |{" "}
         <Link to="/students">Students</Link>
+        
       </p>
     </div>
   );
