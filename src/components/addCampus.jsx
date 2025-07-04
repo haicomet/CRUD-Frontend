@@ -45,7 +45,7 @@ const AddCampus = () => {
                 name="campus name"
                 type="text"
                 required
-                placeholder="campus name"
+                placeholder="campusName"
                 value={campusName}
                 onChange={handleCampusName}
                 />

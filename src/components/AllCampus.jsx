@@ -2,6 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import axios from "axios";
 
+<<<<<<< HEAD
+
+  const AllCampus = () => {
+  const [campus, setCampus] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/campus")
+      .then((res) => setCampuses(res.data))
+      .catch((err) => console.error("Error fetching campuses:", err));
+=======
 const AllCampus = () => {
   const [campus, setCampus] = useState([]);
 
@@ -10,6 +20,7 @@ const AllCampus = () => {
       .get("http://localhost:8080/api/campus")
       .then((res) => setCampus(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
+>>>>>>> cffaea0243b9bd52014485278aaffb51a66729b2
   }, []);
 
   if (campus.length === 0) {
