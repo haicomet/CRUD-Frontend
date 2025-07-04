@@ -1,7 +1,7 @@
 
 import React, {useState} from "react";
 import axios from "axios";
-import './styles/StyleWebsite.css';
+import './styles/addCampusStyle.css';
 
 const AddCampus = () => {
     const [campusName, setCampusName] = useState('');

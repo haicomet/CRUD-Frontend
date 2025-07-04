@@ -12,6 +12,7 @@ const Navbar = () => {
       <Link to="/add-campus" style={{ marginRight: "1rem" }} >Add Campus</Link>
 
     </nav>
+    
   );
 };
 

@@ -1,6 +1,6 @@
 
 .add-campus-page {
-  background-color: #eeeeee;
+  background-color: #ce96e4;
   height: 100vh;
   
   color: rgb(15, 1, 1);
@@ -13,9 +13,9 @@
 }
 
 .add-campus-page input{
-  background-color: #ffffff; /* background color*/
+  background-color: #291c1c; /* background color*/
  display: block;  /* puts each input form on a different line*/
-  padding: 1.0rem; /* size of input box*/
+background-color: #fff; /* size of input box*/
  margin: 0.5rem auto;   /*put input fields in the center*/
  border-radius: 20px;
 
@@ -48,7 +48,10 @@
  
 
 }
-.homePage{
-  background-color: blue;
+.homePage {
+  background-color: rgb(166, 240, 147);
+   
+  text-align: center;
+  font-size: large;
 }
   
