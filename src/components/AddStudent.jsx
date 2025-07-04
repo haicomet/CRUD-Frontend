@@ -19,7 +19,7 @@ const AddStudent = () => {
           imageUrl,
           gpa
         });
-
+        fetchStudents();
       } catch (error) {
         console.error("Error adding student:", error);
       }
