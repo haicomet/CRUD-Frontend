@@ -12,7 +12,7 @@ const AddStudent = () => {
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post("http://localhost:8080/api/students", {
+        await axios.post(`${API_URL}/api/students`, {
           firstName,
           lastName,
           email,

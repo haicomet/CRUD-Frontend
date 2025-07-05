@@ -6,7 +6,7 @@ const AllCampuses = () => {
   const [campuses, setCampuses] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/campuses")
+    axios.get(`${API_URL}/api/campuses`)
       .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campuses:", err));
   }, []);

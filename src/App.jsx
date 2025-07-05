@@ -10,6 +10,8 @@ import SingleStudent from "./components/SingleStudent";
 import SingleCampus from "./components/SingleCampus";
 import AddStudent from "./components/AddStudent";
 
+const API_URL = process.env.API_URL || "http://localhost:8000";
+
 const App = () => {
   return (
     <Router>
