@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router";
-import './styles/StyleWebsite.css';
+
 
 const Home = () => {
   return (
-    <div>
+    <div className="HomePage">
       <p>
         <Link to="/campus">Campus</Link> |{" "}
         <Link to="/students">Students</Link>
