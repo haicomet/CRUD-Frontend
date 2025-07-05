@@ -12,7 +12,7 @@ const AddStudent = () => {
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post("http://crud-backend-iota-three.vercel.app/api/students", {
+        await axios.post(`${API_URL}/api/students`, {
           firstName,
           lastName,
           email,

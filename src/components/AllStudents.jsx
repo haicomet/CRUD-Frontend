@@ -6,8 +6,8 @@ import DeleteStudent from "./DeleteStudent";
 const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
-  const fetchStudents = async () => {
-    await axios.get("http://crud-backend-iota-three.vercel.app/api/students")
+  const fetchStudents = () => {
+    axios.get(`${API_URL}/api/students`)
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));
   };
