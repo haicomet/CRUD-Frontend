@@ -19,7 +19,7 @@ import axios from "axios";
 
   return (
     <div>
-      <h2>All Campus</h2>
+      <h2>Campus Listing</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (
           <Link
