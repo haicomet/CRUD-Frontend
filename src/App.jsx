@@ -18,9 +18,7 @@ const App = () => {
     
     <Router>
       <div className="home-Page">  
-        <h1> 
-        Campus Listing
-      </h1>
+      
         
       <NavBar />
       <Routes>

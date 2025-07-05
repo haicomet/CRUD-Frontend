@@ -1,7 +1,7 @@
 
 import React, {useState} from "react";
 import axios from "axios";
-import './styles/addCampusStyle.css';
+import './styles/stylingWebsite.css';
 
 const AddCampus = () => {
     const [campusName, setCampusName] = useState('');
@@ -41,7 +41,8 @@ const AddCampus = () => {
     
 
     return (
-        <div className="add-campus-page">
+        <div className="add-campus-name">
+            <h1>Campus Name: </h1>
         <form onSubmit = {handleSubmit} className="new-campus-form">
                 <input
                 

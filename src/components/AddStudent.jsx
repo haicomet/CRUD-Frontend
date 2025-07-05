@@ -42,6 +42,9 @@ const AddStudent = () => {
 
     return(
       <div className="add-student-page">
+         <h1>Student Name: </h1>
+         <p>First Name</p>
+         <p>Last Name</p>
         <form onSubmit = {handleSubmit} className="new-student-form">
             <input
             name="firstName"
@@ -51,6 +54,8 @@ const AddStudent = () => {
             value={firstName}
             onChange={handleFirstName}
             />
+
+
             <input
             name="lastName"
             type="text"
@@ -59,6 +64,7 @@ const AddStudent = () => {
             value={lastName}
             onChange={handleLastName}
             />
+            <h1> Student Email </h1>
             <input
             name="email"
             type="text"
@@ -67,6 +73,7 @@ const AddStudent = () => {
             value={email}
             onChange={handleEmail}
             />
+            <h1>Add A Picture of Yourself </h1>
             <input
             name="imageUrl"
             type="text"
