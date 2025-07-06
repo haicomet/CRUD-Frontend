@@ -5,7 +5,7 @@ const StudentCard = ({student}) => {
     return (
         <div className="student-card">
           <Link to={`/students/${student.id}`}>
-             <img src={student.imageUrl} alt={`${student.firstName}'s avatar}`}/>
+             <img src={student.imageUrl} alt={`${student.firstName}'s avatar}` } className="student-img"/>
              <h3>{student.firstName} {student.lastName}</h3> 
              <p>EMPLID: {student.id} </p>
              <p>Email: {student.email} </p>
