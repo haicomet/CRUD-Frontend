@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+const API_URL = process.env.API_URL || "http://localhost:8080";
 
 const AddStudent = () => {
     const [firstName, setFirstName] = useState("");
