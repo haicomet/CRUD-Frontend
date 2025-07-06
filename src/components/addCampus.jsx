@@ -35,6 +35,11 @@ useEffect(() => {
             description,
 
         });
+        alert("Campus created successfully!");
+        setCampusName("");
+        setImageUrl("");
+        setAddress("");
+        setDescription("");
     } catch (error) {
         console.error("Error adding campus", error);
     }
