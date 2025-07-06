@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import axios from "axios";
 import CampusCard from "./CampusCard";
+import DeleteCampus from "./deleteCampus";
+const API_URL = process.env.API_URL || "http://localhost:8080";
 
 const AllCampus = () => {
   const [campus, setCampus] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/campus")
+      .get(`${API_URL}/api/campus`)
       .then((res) => setCampus(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
@@ -26,7 +28,10 @@ const AllCampus = () => {
     ) : (
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (
-          <CampusCard key={campus.id} campus={campus} />
+          <div key={campus.id} >
+            <CampusCard campus={campus} />
+            <DeleteCampus />
+          </div>
         ))}
       </div>
     )}
