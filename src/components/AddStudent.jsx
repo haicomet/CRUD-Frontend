@@ -132,14 +132,14 @@ const AddStudent = () => {
             onChange={handleStudents}
             />
             <label>Assign to </label>
-            <select value={studentsId} onChange={(e) => setStudentId(e.target.value)} required>
-              <option value="">Select a campus</option>
-              {campus.map((campus) => (
-             <option key={campus.id} value={campus.id}>
-              {campus.campusName}
-              </option>
-            ))}
-            </select>
+            {/* <select value={studentsId} onChange={(e) => setStudentId(e.target.value)} required> */}
+              {/* <option value="">Select a campus</option> */}
+              {/* {campus.map((campus) => ( */}
+             {/* <option key={campus.id} value={campus.id}> */}
+              {/* {campus.campusName} */}
+              {/* </option> */}
+             {/* ))} */}
+            {/* </select> */}
             <button id="submit-button"> Enroll </button>
         </form>
         </div>
