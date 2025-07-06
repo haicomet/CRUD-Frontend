@@ -20,6 +20,9 @@ const AllCampus = () => {
   return (
     <div>
       <h2>All Campus</h2>
+      <Link to="/add-campus" >
+      <button className="add-campus-btn">Add Campus</button>
+      </Link>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (
           <CampusCard key={campus.id} campus={campus} />
