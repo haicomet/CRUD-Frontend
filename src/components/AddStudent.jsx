@@ -130,7 +130,7 @@ const AddStudent = () => {
             min="0.0"
             max="4.0"
           />
-          <input
+          {/*<input
             name="StudentId"
             type="number"
             placeholder="12345"
@@ -144,6 +144,7 @@ const AddStudent = () => {
             value={students}
             onChange={handleStudents}
           />
+          */}
           <label>Assign to </label>
           <select
             value={campusId}
