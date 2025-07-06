@@ -12,6 +12,19 @@ const AddCampus = () => {
     const [description, setDescription] = useState('');
 
 
+useEffect(() => {
+      const fetchCampus = async () => {
+        try {
+          const res = await axios.get(`${API_URL}/api/campus`);
+          setCampus(res.data);
+        } catch (error) {
+          console.error("Error fetching campus:", error);
+        }
+      };
+      fetchCampus();
+    }, []);
+
+
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {

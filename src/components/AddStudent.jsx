@@ -14,10 +14,10 @@ const AddStudent = () => {
     const [campuses, setCampus] = useState([]);
 
     useEffect(() => {
-      const fetchCampus = async () => {
+      const fetchStudent = async () => {
         try {
           const res = await axios.get(`${API_URL}/api/student`);
-          setCampus(res.data);
+          setStudent(res.data);
         } catch (error) {
           console.error("Error fetching student:", error);
         }
@@ -108,7 +108,7 @@ const AddStudent = () => {
             min = "0.0"
             max = "4.0"
             />
-            <label>Assign to Campus</label>
+            <label>Assign to </label>
             <select value={campusId} onChange={(e) => setCampusId(e.target.value)} required>
               <option value="">Select a campus</option>
               {campuses.map((campus) => (
