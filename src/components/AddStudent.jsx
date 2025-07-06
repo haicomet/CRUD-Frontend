@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+
+import React, {useState, useEffect} from "react";
 import axios from "axios";
-import "./styles/AddStudent.css";
+import './styles/stylingWebsite.css';
 
 const api = process.env.API_URL || "http://localhost:8080";
 
@@ -10,19 +12,21 @@ const AddStudent = () => {
     const [email, setEmail] = useState("");
     const [imageUrl, setImage] = useState("");
     const [gpa, setGpa] = useState("");
-    const [campusId, setCampusId] = useState("");
-    const [campuses, setCampuses] = useState([]);
+    const [studentsId, setStudentId] = useState("");
+    const [students, setStudents] = useState("");
 
     useEffect(() => {
-      const fetchCampuses = async () => {
+      const fetchStudent = async () => {
         try {
           const res = await axios.get(`${api}/api/campus`);
           setCampuses(res.data);
+          const res = await axios.get(`${API_URL}/api/student`);
+          setStudents(res.data);
         } catch (error) {
-          console.error("Error fetching campuses:", error);
+          console.error("Error fetching student:", error);
         }
       };
-      fetchCampuses();
+      fetchStudent();
     }, []);
   
 
@@ -35,9 +39,10 @@ const AddStudent = () => {
           email,
           imageUrl,
           gpa,
-          campusId: parseInt(campusId),
+          studentsId,
+          students,//Id: parseInt(studentsId),
         });
-        fetchStudents();
+       fetchStudents();
       } catch (error) {
         console.error("Error adding student:", error);
       }
@@ -57,7 +62,14 @@ const AddStudent = () => {
    const handleGpa = (event) => {
     setGpa(event.target.value);
    }
-
+    const handleId = (event) => {
+    setStudentId(event.target.value);
+  }
+   const handleStudents = (event) => {
+    setStudents(event.target.value);
+  }
+   
+   
     return(
       <div className="add-student-page">
         <div className="add-student-container">
@@ -108,15 +120,29 @@ const AddStudent = () => {
             min = "0.0"
             max = "4.0"
             />
-            <label>Assign to Campus</label>
-            <select value={campusId} onChange={(e) => setCampusId(e.target.value)} required>
-              <option value="">Select a campus</option>
-              {campuses.map((campus) => (
-             <option key={campus.id} value={campus.id}>
-              {campus.campusName}
-              </option>
-            ))}
-            </select>
+            <input
+            name="StudentId"
+            type="number"
+            placeholder="12345"
+            value={studentsId}
+            onChange={handleId}
+            />
+            <input
+            name="StudentId"
+            type="number"
+            placeholder="12345"
+            value={students}
+            onChange={handleStudents}
+            />
+            <label>Assign to </label>
+            {/* <select value={studentsId} onChange={(e) => setStudentId(e.target.value)} required> */}
+              {/* <option value="">Select a campus</option> */}
+              {/* {campus.map((campus) => ( */}
+             {/* <option key={campus.id} value={campus.id}> */}
+              {/* {campus.campusName} */}
+              {/* </option> */}
+             {/* ))} */}
+            {/* </select> */}
             <button id="submit-button"> Enroll </button>
         </form>
         </div>

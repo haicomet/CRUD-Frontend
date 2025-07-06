@@ -4,7 +4,7 @@ import AllCampus from "./AllCampus";
 const API_URL = process.env.API_URL || "http://localhost:8080";
 
 
-const DeleteCampus = ( { campusId,fetchCampus }) => {
+const DeleteCampus = ( { campusId, fetchCampus }) => {
     const handleDeleteCampus = async() => {
         try { 
             await axios.delete(`${API_URL}/api/campuses/${campusId}`);
