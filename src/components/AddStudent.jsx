@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./styles/AddStudent.css";
+
 const API_URL = process.env.API_URL || "http://localhost:8080";
 
 const AddStudent = () => {
@@ -43,8 +45,6 @@ const AddStudent = () => {
     return(
       <div className="add-student-page">
          <h1>Student Name: </h1>
-         <p>First Name</p>
-         <p>Last Name</p>
         <form onSubmit = {handleSubmit} className="new-student-form">
             <input
             name="firstName"
