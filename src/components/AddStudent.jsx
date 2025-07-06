@@ -35,7 +35,7 @@ const AddStudent = () => {
           email,
           imageUrl,
           gpa,
-          studentsId: parseInt(studentsId),
+          students,//Id: parseInt(studentsId),
         });
        // fetchStudents();
       } catch (error) {
