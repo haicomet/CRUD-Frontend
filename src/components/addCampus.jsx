@@ -1,9 +1,9 @@
 
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import './styles/stylingWebsite.css';
 
-const API_URL = process.env.API_URL || "http://localhost:8080";
+const api = process.env.API_URL || "http://localhost:8080";
 
 const AddCampus = () => {
     const [campusName, setCampusName] = useState('');
@@ -12,23 +12,10 @@ const AddCampus = () => {
     const [description, setDescription] = useState('');
 
 
-useEffect(() => {
-      const fetchCampus = async () => {
-        try {
-          const res = await axios.get(`${API_URL}/api/campus`);
-          setCampus(res.data);
-        } catch (error) {
-          console.error("Error fetching campus:", error);
-        }
-      };
-      fetchCampus();
-    }, []);
-
-
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post(`${API_URL}/api/campus`, {
+        await axios.post(`${API_URL}/api/campuses`, {
             campusName,
             imageUrl,
             address,

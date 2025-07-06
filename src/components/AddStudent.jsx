@@ -30,7 +30,7 @@ const AddStudent = () => {
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post(`${API_URL}/api/students`, {
+        await axios.post(`${api}/api/students`, {
           firstName,
           lastName,
           email,

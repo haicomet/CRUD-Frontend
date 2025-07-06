@@ -3,14 +3,15 @@ import { Link } from "react-router";
 import axios from "axios";
 import DeleteStudent from "./DeleteStudent";
 import StudentCard from "./StudentCard";
-const API_URL = process.env.API_URL || "http://localhost:8080";
+const api = process.env.API_URL || "http://localhost:8080";
 
 const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
 
-  const fetchStudents = () => {
-    axios.get(`${API_URL}/api/students`)
+  const fetchStudents = async () => {
+    axios
+      .get(`${api}/api/students`)
 
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));
