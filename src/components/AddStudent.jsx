@@ -17,7 +17,7 @@ const AddStudent = () => {
       const fetchStudent = async () => {
         try {
           const res = await axios.get(`${API_URL}/api/student`);
-          setStudent(res.data);
+          setStudents(res.data);
         } catch (error) {
           console.error("Error fetching student:", error);
         }
