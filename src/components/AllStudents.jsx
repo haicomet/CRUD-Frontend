@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import DeleteStudent from "./DeleteStudent";
 import StudentCard from "./StudentCard";
