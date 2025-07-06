@@ -7,8 +7,8 @@ import axios from "axios";
   const [campus, setCampus] = useState([]);
 
   useEffect(() => {
-    const api = process.env.REACT_APP_API_BE_URL;
-    axios.get(`{$api}/campus`)
+    const api = REACT_APP_API_BE_URL;
+    axios.get(`${api}/campus`)
       .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
