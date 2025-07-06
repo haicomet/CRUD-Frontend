@@ -7,7 +7,8 @@ const SingleStudent = () => {
   const [student, setStudent] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:8080api/students/${id}`)
+   const api = process.env.REACT_APP_API_BE_URL;
+    axios.get(`{$api}/campus`)
       .then(res => setStudent(res.data))
       .catch(err => console.error("Error fetching student:", err));
   }, [id]);

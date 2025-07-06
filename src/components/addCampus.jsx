@@ -42,9 +42,11 @@ const AddCampus = () => {
 
     return (
         <div className="add-campus-name">
-            <h1>Campus Name: </h1>
-        <form onSubmit = {handleSubmit} className="new-campus-form">
-                <input
+            <div className="add-campus-container">
+                 
+         <form onSubmit = {handleSubmit} className="new-campus-form">
+            <h1>Campus Information: </h1>
+            <input
                 
                 name="campus name"
                 type="text"
@@ -53,7 +55,7 @@ const AddCampus = () => {
                 value={campusName}
                 onChange={handleCampusName}
                 />
-                <input
+            <input
                 name="imageUrl"
                 type="text"
                 required
@@ -62,7 +64,7 @@ const AddCampus = () => {
                 onChange={handleImage}
                 
                 />
-                <input
+            <input
                 name="address"
                 type="text"
                 required
@@ -70,7 +72,7 @@ const AddCampus = () => {
                 value={address}
                 onChange={handleAddress}
                 />
-                <input
+            <input
                 name="description"
                 type="text"
                 placeholder="description"
@@ -81,6 +83,7 @@ const AddCampus = () => {
                 <button id="submit-button" type="submit"> Add </button>
                
             </form>
+             </div>
              </div>
         );
 }

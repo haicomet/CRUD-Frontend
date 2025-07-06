@@ -7,7 +7,8 @@ import axios from "axios";
   const [campus, setCampus] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/campus")
+    const api = process.env.REACT_APP_API_BE_URL;
+    axios.get(`{$api}/campus`)
       .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
@@ -17,7 +18,7 @@ import axios from "axios";
   }
 
   return (
-    <div>
+    <div className="all-campus-page">
       <h2>Campus Listing</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (

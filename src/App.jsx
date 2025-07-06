@@ -37,13 +37,13 @@ const App = () => {
         <Route path="*" element={<h1>All Campus</h1>} />
         
       </Routes>
+      
       <div className="buttons">
       <h1 > 
         
       </h1>
       
-       <button id="submit-button">Add Campus </button>
-       <button id="submit-button">Add Student </button>
+       
       </div>
       </div>
     </Router>
