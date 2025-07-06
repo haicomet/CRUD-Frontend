@@ -13,9 +13,7 @@ const AllCampus = () => {
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
 
-  if (campus.length === 0) {
-    return <p>There are no campus registered in the database.</p>;
-  }
+  
 
   return (
     <div>
@@ -23,11 +21,15 @@ const AllCampus = () => {
       <Link to="/add-campus" >
       <button className="add-campus-btn">Add Campus</button>
       </Link>
+      {campus.length === 0 ? (
+      <p>There are no campus registered in the database.</p>
+    ) : (
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (
           <CampusCard key={campus.id} campus={campus} />
         ))}
       </div>
+    )}
     </div>
   );
 };
