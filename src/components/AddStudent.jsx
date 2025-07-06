@@ -38,7 +38,7 @@ const AddStudent = () => {
           studentsId,
           students,//Id: parseInt(studentsId),
         });
-       // fetchStudents();
+       fetchStudents();
       } catch (error) {
         console.error("Error adding student:", error);
       }
