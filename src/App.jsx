@@ -23,29 +23,16 @@ const App = () => {
         
       <NavBar />
       <Routes>
-        <Route path="/home" element={<Home />} 
-        
-        
-      />
-
+        <Route path="/home" element={<Home />}/>
         <Route path="/campus" element={<AllCampus />} />
         <Route path="/students" element={<AllStudents />} />
         <Route path="/campus/:id" element={<SingleCampus />} />
         <Route path="/students/:id" element={<SingleStudent />} />
         <Route path="/add-student" element={<AddStudent/>} />
-          <Route path="/add-campus" element={<AddCampus/>} />
         <Route path="/add-campus" element={<AddCampus/>} />
         <Route path="*" element={<h1>All Campus</h1>} />
         
       </Routes>
-      
-      <div className="buttons">
-      <h1 > 
-        
-      </h1>
-      
-       
-      </div>
       </div>
     </Router>
     
