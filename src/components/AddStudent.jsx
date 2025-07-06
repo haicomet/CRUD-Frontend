@@ -10,8 +10,8 @@ const AddStudent = () => {
     const [email, setEmail] = useState("");
     const [imageUrl, setImage] = useState("");
     const [gpa, setGpa] = useState("");
-    const [campusId, setCampusId] = useState("");
-    const [campuses, setCampus] = useState("");
+    const [studentsId, setStudentId] = useState("");
+    const [students, setStudents] = useState("");
 
     useEffect(() => {
       const fetchStudent = async () => {
@@ -35,6 +35,7 @@ const AddStudent = () => {
           email,
           imageUrl,
           gpa,
+          studentsId,
           students,//Id: parseInt(studentsId),
         });
        // fetchStudents();
@@ -57,7 +58,14 @@ const AddStudent = () => {
    const handleGpa = (event) => {
     setGpa(event.target.value);
    }
-
+    const handleId = (event) => {
+    setStudentId(event.target.value);
+  }
+   const handleStudents = (event) => {
+    setStudents(event.target.value);
+  }
+   
+   
     return(
       <div className="add-student-page">
         <div className="add-student-container">
@@ -107,6 +115,20 @@ const AddStudent = () => {
             onChange={handleGpa}
             min = "0.0"
             max = "4.0"
+            />
+            <input
+            name="StudentId"
+            type="number"
+            placeholder="12345"
+            value={studentsId}
+            onChange={handleId}
+            />
+            <input
+            name="StudentId"
+            type="number"
+            placeholder="12345"
+            value={students}
+            onChange={handleStudents}
             />
             <label>Assign to </label>
             <select value={campusId} onChange={(e) => setCampusId(e.target.value)} required>
