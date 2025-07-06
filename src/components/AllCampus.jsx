@@ -8,9 +8,9 @@ const API_URL = process.env.API_URL || "http://localhost:8080";
   const [campus, setCampus] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`${API_URL}/api/campuses`)
-      .then((res) => setCampus(res.data))
+    const api = REACT_APP_BE_URL;
+    axios.get(`${api}/campus`)
+      .then((res) => setCampuses(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
 
@@ -19,7 +19,7 @@ const API_URL = process.env.API_URL || "http://localhost:8080";
   }
 
   return (
-    <div>
+    <div className="all-campus-page">
       <h2>Campus Listing</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (

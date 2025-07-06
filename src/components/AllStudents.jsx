@@ -7,8 +7,9 @@ const API_URL = process.env.API_URL || "http://localhost:8080";
 const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
-  const fetchStudents = () => {
-    axios.get(`${API_URL}/api/students`)
+  const fetchStudents = async () => {
+    const api = REACT_APP_BE_URL;
+    axios.get(`${api}/campus`)
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));
   };

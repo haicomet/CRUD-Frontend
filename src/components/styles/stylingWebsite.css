@@ -1,38 +1,60 @@
 
-.add-campus-page {
-  background-color: #e4d1d1;
-  height: 100vh;
-  
-  color: rgb(15, 1, 1);
-  padding: 0.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  
- font-size: medium;
-  border: none;
-  
 
-}
+/*  
+Campus form portion
+*/
 
-.add-campus-name input{ /*changes input boxes*/
-  background-color: #ffffff; /* background color*/
-  height: 4vh;
-  
- display: block;  /* puts each input form on a different line*/
-background-color: #d8d8d8; /* size of input box*/
- margin: 0.5rem auto;   /*put input fields in the center*/
- border-radius: 0px;
-
-  
+.add-campus-container {
+    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #9faef1; 
+   
  
-
 }
 
+.h1 {
+   justify-content: center;
+ align-items: center;
+    color:#3f4664;
+    font-size: 20px;
+   
+    
+}
 
+.new-campus-form { 
+    
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(247, 247, 247);
+    padding: 5rem;
+    border-radius: 7px;
+    
+    width: 100%;
+    max-width: 600px; 
+    
+
+       
+}
 
 .homePage {
   background-color: rgb(53, 87, 44);
    
   text-align: center;
   font-size: large;
+
 }
+
+.new-student-form { 
+ display: flex;
   
+       
+}
+
+
+
+
+
