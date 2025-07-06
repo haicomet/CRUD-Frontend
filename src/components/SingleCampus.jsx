@@ -25,11 +25,7 @@ const SingleCampus = () => {
       {campus.students?.length > 0 ? (
         <ul>
           {campus.students.map(student => (
-            <li key={student.id}>
-              <Link to={`/students/${student.id}`}>
-                {student.firstName} {student.lastName}
-              </Link>
-            </li>
+            <StudentCard key={student.id} student = {student}/>
           ))}
         </ul>
       ) : (
