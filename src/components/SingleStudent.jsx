@@ -27,8 +27,8 @@ const SingleStudent = () => {
 
       <p>
         <strong>Campus:</strong>{" "}
-        {student.Campus ? (
-          <CampusCard key={student.Campus.id} campus={student.Campus} />
+        {student.CAMPUS ? (
+          <CampusCard key={student.CAMPUS.id} campus={student.CAMPUS} />
         ) : (
           "Not found"
         )}
