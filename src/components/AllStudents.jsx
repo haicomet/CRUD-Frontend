@@ -7,7 +7,7 @@ const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
   const fetchStudents = async () => {
-    const api = REACT_APP_API_BE_URL;
+    const api = REACT_APP_BE_URL;
     axios.get(`${api}/campus`)
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));

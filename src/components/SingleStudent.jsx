@@ -7,7 +7,7 @@ const SingleStudent = () => {
   const [student, setStudent] = useState(null);
 
   useEffect(() => {
-     const api = REACT_APP_API_BE_URL;
+     const api = REACT_APP_BE_URL;
      axios.get(`${api}/campus`)
       .then(res => setStudent(res.data))
       .catch(err => console.error("Error fetching student:", err));
