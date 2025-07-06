@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import CampusCard from "./CampusCard";
 
 const AllCampus = () => {
   const [campus, setCampus] = useState([]);
