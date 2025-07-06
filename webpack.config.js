@@ -14,7 +14,7 @@ module.exports = {
   devtool: "source-map",
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.REACT_APP_BE_URL" : JSON.stringify(process.env.REACT_APP_BE_URL),
+      "process.env.API_URL" : JSON.stringify(process.env.API_URL),
 }),
 ],
   module: {
