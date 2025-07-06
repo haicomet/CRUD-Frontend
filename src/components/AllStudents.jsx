@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
 import axios from "axios";
 import DeleteStudent from "./DeleteStudent";
+import StudentCard from "./StudentCard";
 const API_URL = process.env.API_URL || "http://localhost:8080";
 
 const AllStudents = () => {
@@ -24,16 +25,14 @@ const AllStudents = () => {
   return (
     <div>
       <h2>All Students</h2>
-      <ul>
+      <div> 
         {students.map((student) => (
-          <li key={student.id}>
-            <Link to={`/students/${student.id}`}>
-              {student.firstName} {student.lastName}
-            </Link>
+          <div key={student.id}>
+            <StudentCard student = {student}/>
             <DeleteStudent studentId={student.id} fetchStudents={fetchStudents}/>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

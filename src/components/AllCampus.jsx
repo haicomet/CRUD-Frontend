@@ -10,7 +10,7 @@ const API_URL = process.env.API_URL || "http://localhost:8080";
   useEffect(() => {
     const api = process.env.REACT_APP_BE_URL;
     axios.get(`${api}/campus`)
-      .then((res) => setCampuses(res.data))
+      .then((res) => setCampus(res.data))
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
 
@@ -23,24 +23,7 @@ const API_URL = process.env.API_URL || "http://localhost:8080";
       <h2>Campus Listing</h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (
-          <Link
-            key={campus.id}
-            to={`/campus/${campus.id}`}
-            style={{ textDecoration: "none", color: "inherit" }}>
-            <div
-              style={{
-                border: "1px solid #ccc",
-                padding: "1rem",
-                borderRadius: "8px",
-              }}>
-              <img
-                src={campus.imageUrl}
-                alt={campus.name}
-                style={{ width: "200px", height: "100px", objectFit: "cover" }}
-              />
-              <h3>{campus.name}</h3>
-            </div>
-          </Link>
+          <CampusCard key={campus.id} campus={campus} />
         ))}
       </div>
     </div>
