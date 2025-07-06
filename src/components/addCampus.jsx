@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import axios from "axios";
 import './styles/stylingWebsite.css';
 
+const API_URL = process.env.API_URL || "http://localhost:8080";
+
 const AddCampus = () => {
     const [campusName, setCampusName] = useState('');
     const [imageUrl, setImageUrl] = useState('');
@@ -13,7 +15,7 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post("http://crud-backend-iota-three.vercel.app/api/campus", {
+        await axios.post(`${API_URL}/api/campuses`, {
             campusName,
             imageUrl,
             address,
