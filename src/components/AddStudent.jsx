@@ -11,7 +11,7 @@ const AddStudent = () => {
     const [imageUrl, setImage] = useState("");
     const [gpa, setGpa] = useState("");
     const [campusId, setCampusId] = useState("");
-    const [campuses, setCampus] = useState([]);
+    const [campuses, setCampus] = useState("");
 
     useEffect(() => {
       const fetchStudent = async () => {
@@ -22,7 +22,7 @@ const AddStudent = () => {
           console.error("Error fetching student:", error);
         }
       };
-      fetchCampus();
+      fetchStudent();
     }, []);
   
 
@@ -37,7 +37,7 @@ const AddStudent = () => {
           gpa,
           studentsId: parseInt(studentsId),
         });
-        fetchStudents();
+       // fetchStudents();
       } catch (error) {
         console.error("Error adding student:", error);
       }
