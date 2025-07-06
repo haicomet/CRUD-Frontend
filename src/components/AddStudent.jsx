@@ -1,7 +1,7 @@
 
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import './styles/stylingWebsite.css';
+import './styles/AddStudent.css';
 
 const API_URL = process.env.API_URL || "http://localhost:8080";
 
