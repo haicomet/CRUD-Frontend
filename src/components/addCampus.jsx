@@ -15,7 +15,7 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post(`${API_URL}/api/campuses`, {
+        await axios.post(`${API_URL}/api/campus`, {
             campusName,
             imageUrl,
             address,

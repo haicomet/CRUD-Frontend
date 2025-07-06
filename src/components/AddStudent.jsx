@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./styles/AddStudent.css";
+import './styles/stylingWebsite.css';
 
 const API_URL = process.env.API_URL || "http://localhost:8080";
 
@@ -11,18 +11,18 @@ const AddStudent = () => {
     const [imageUrl, setImage] = useState("");
     const [gpa, setGpa] = useState("");
     const [campusId, setCampusId] = useState("");
-    const [campuses, setCampuses] = useState([]);
+    const [campuses, setCampus] = useState([]);
 
     useEffect(() => {
-      const fetchCampuses = async () => {
+      const fetchCampus = async () => {
         try {
-          const res = await axios.get(`${API_URL}/api/campus`);
-          setCampuses(res.data);
+          const res = await axios.get(`${API_URL}/api/student`);
+          setCampus(res.data);
         } catch (error) {
-          console.error("Error fetching campuses:", error);
+          console.error("Error fetching student:", error);
         }
       };
-      fetchCampuses();
+      fetchCampus();
     }, []);
   
 
@@ -35,7 +35,7 @@ const AddStudent = () => {
           email,
           imageUrl,
           gpa,
-          campusId: parseInt(campusId),
+          studentsId: parseInt(studentsId),
         });
         fetchStudents();
       } catch (error) {
