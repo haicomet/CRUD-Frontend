@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import './styles/stylingWebsite.css';
 
-const API_URL = process.env.API_URL || "http://localhost:8080";
+const api = process.env.API_URL || "http://localhost:8080";
 
 const AddCampus = () => {
     const [campusName, setCampusName] = useState('');
@@ -15,7 +15,7 @@ const AddCampus = () => {
     const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post(`${API_URL}/api/campuses`, {
+        await axios.post(`${api}/api/campuses`, {
             campusName,
             imageUrl,
             address,

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./styles/AddStudent.css";
 
-const API_URL = process.env.API_URL || "http://localhost:8080";
+const api = process.env.API_URL || "http://localhost:8080";
 
 const AddStudent = () => {
     const [firstName, setFirstName] = useState("");
@@ -16,7 +16,7 @@ const AddStudent = () => {
     useEffect(() => {
       const fetchCampuses = async () => {
         try {
-          const res = await axios.get(`${API_URL}/api/campus`);
+          const res = await axios.get(`${api}/api/campus`);
           setCampuses(res.data);
         } catch (error) {
           console.error("Error fetching campuses:", error);
@@ -29,7 +29,7 @@ const AddStudent = () => {
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post(`${API_URL}/api/students`, {
+        await axios.post(`${api}/api/students`, {
           firstName,
           lastName,
           email,
