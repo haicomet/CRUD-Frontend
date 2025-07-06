@@ -6,9 +6,14 @@ import DeleteStudent from "./DeleteStudent";
 const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
+<<<<<<< HEAD
   const fetchStudents = async () => {
     const api = process.env.REACT_APP_API_BE_URL;
     axios.get(`{$api}/campus`)
+=======
+  const fetchStudents = () => {
+    axios.get(`${API_URL}/api/students`)
+>>>>>>> 71e1b953058a6d8088bbbfde3c6e90d04a84e72a
       .then((res) => setStudents(res.data))
       .catch((err) => console.error("Error fetching students:", err));
   };

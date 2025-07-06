@@ -5,7 +5,7 @@ import AllStudents from "./AllStudents";
 const DeleteStudent = ({studentId, fetchStudents}) => {
     const handleDeleteStu = async() => {
         try {
-            await axios.delete(`http://localhost:8080/api/students/${studentId}`);
+            await axios.delete(`${API_URL}/api/students/${studentId}`);
             fetchStudents();
         } catch (error) {
             console.error("Error deleting task:", error);

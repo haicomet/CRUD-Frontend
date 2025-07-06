@@ -8,16 +8,32 @@ const AddStudent = () => {
     const [email, setEmail] = useState("");
     const [imageUrl, setImage] = useState("");
     const [gpa, setGpa] = useState("");
+    const [campusId, setCampusId] = useState("");
+    const [campuses, setCampuses] = useState([]);
+
+    useEffect(() => {
+      const fetchCampuses = async () => {
+        try {
+          const res = await axios.get(`${API_URL}/api/campus`);
+          setCampuses(res.data);
+        } catch (error) {
+          console.error("Error fetching campuses:", error);
+        }
+      };
+      fetchCampuses();
+    }, []);
+  
 
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        await axios.post("http://localhost:8080/api/students", {
+        await axios.post(`${API_URL}/api/students`, {
           firstName,
           lastName,
           email,
           imageUrl,
-          gpa
+          gpa,
+          campusId: parseInt(campusId),
         });
         fetchStudents();
       } catch (error) {
@@ -92,7 +108,16 @@ const AddStudent = () => {
             min = "0.0"
             max = "4.0"
             />
-            <button id="submit-button">Add </button>
+            <label>Assign to Campus</label>
+            <select value={campusId} onChange={(e) => setCampusId(e.target.value)} required>
+              <option value="">Select a campus</option>
+              {campuses.map((campus) => (
+             <option key={campus.id} value={campus.id}>
+              {campus.campusName}
+              </option>
+            ))}
+            </select>
+            <button id="submit-button"> Enroll </button>
         </form>
         </div>
          </div>
