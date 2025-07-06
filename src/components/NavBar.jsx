@@ -10,8 +10,8 @@ const Navbar = () => {
       <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
       <Link to="/campus" style={{ marginRight: "1rem" }}>Campus</Link>
       <Link to="/students" style={{ marginRight: "1rem" }}>Students</Link>
-      <Link to="/add-student" style={{ marginRight: "1rem" }}>Add Student</Link>
-      <Link to="/add-campus" style={{ marginRight: "1rem" }} >Add Campus</Link>
+      <Link to="/add-students" style={{ marginRight: "1rem" }}>Add Student</Link>
+      {/*<Link to="/add-campus" style={{ marginRight: "1rem" }} >Add Campus</Link>*/}
 
     </nav>
     

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
 import axios from "axios";
+import StudentCard from "./StudentCard";
 
 const SingleCampus = () => {
   const { id } = useParams(); 
@@ -25,11 +26,7 @@ const SingleCampus = () => {
       {campus.students?.length > 0 ? (
         <ul>
           {campus.students.map(student => (
-            <li key={student.id}>
-              <Link to={`/students/${student.id}`}>
-                {student.firstName} {student.lastName}
-              </Link>
-            </li>
+            <StudentCard key={student.id} student={student}/>
           ))}
         </ul>
       ) : (
