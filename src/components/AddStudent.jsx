@@ -17,7 +17,7 @@ const AddStudent = () => {
     useEffect(() => {
       const fetchStudent = async () => {
         try {
-          const res = await axios.get(`${API_URL}/api/student`);
+          const res = await axios.get(`${API_URL}/api/students`);
           setStudents(res.data);
         } catch (error) {
           console.error("Error fetching student:", error);
