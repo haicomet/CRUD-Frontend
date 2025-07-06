@@ -24,9 +24,9 @@ const SingleCampus = () => {
       <p>{campus.description}</p>
 
       <h3>Enrolled Students</h3>
-      {campus.Students?.length > 0 ? (
+      {campus.students?.length > 0 ? (
         <ul>
-          {campus.Students.map(student => (
+          {campus.students.map(student => (
             <StudentCard key={student.id} student = {student}/>
           ))}
         </ul>

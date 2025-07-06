@@ -54,7 +54,14 @@ const AddStudent = () => {
         //students,//Id:
         campusId: parseInt(campusId),
       });
-      fetchStudents();
+      alert("Student enrolled successfully!");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setImage("");
+      setGpa("");
+      setCampusId("");
+      //fetchStudents();
     } catch (error) {
       console.error("Error adding student:", error);
     }
@@ -74,12 +81,13 @@ const AddStudent = () => {
   const handleGpa = (event) => {
     setGpa(event.target.value);
   };
-  const handleId = (event) => {
+  {/*const handleId = (event) => {
     setStudentId(event.target.value);
   };
   const handleStudents = (event) => {
     setStudents(event.target.value);
   };
+  */}
 
   return (
     <div className="add-student-page">
