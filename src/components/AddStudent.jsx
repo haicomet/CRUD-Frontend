@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
 
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import './styles/stylingWebsite.css';
+import './styles/AddStudent.css';
 
-const api = process.env.API_URL || "http://localhost:8080";
+const API_URL = process.env.API_URL || "http://localhost:8080";
 
 const AddStudent = () => {
     const [firstName, setFirstName] = useState("");
@@ -18,8 +17,6 @@ const AddStudent = () => {
     useEffect(() => {
       const fetchStudent = async () => {
         try {
-          const res = await axios.get(`${api}/api/campus`);
-          setCampuses(res.data);
           const res = await axios.get(`${API_URL}/api/student`);
           setStudents(res.data);
         } catch (error) {
