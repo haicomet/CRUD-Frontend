@@ -47,7 +47,9 @@ Campus form portion
   font-size: large;
 
 }
-
+/*  
+Student form portion
+*/
 .add-student-container {
     
     display: flex;
@@ -79,62 +81,5 @@ Campus form portion
     
     width: 100%;
     max-width: 600px; 
-}
-
-
-.campus-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-
-
-
-
-.add-campus-btn {
-  margin: 1rem 0;
-  padding: 10px 16px;
-  font-weight: bold;
-  border: none;
-  background-color: #4f46e5;
-  color: white;
-  border-radius: 8px;
-  
-  
-}
-
-.add-campus-btn:hover {
-  background-color: #4338ca;
-}
-
-
-
-
-
-
-
-
-
-
-.campus-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.campDesign {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  padding: 1rem;
-  background-color: #fefefe;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 

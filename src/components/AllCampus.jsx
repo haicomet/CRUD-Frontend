@@ -15,32 +15,26 @@ const AllCampus = () => {
       .catch((err) => console.error("Error fetching campus:", err));
   }, []);
 
-  
-
   return (
     <div>
-      
       <h2>All Campuses</h2>
-      <Link to="/add-campus" >
-      <button className="add-campus-btn">Add Campus</button>
+      <Link to="/add-campus">
+        <button className="add-campus-btn">Add Campus</button>
       </Link>
       {campus.length === 0 ? (
-      <p>There are no campus registered in the database.</p>
-    ) : (
-      <div className="campus-grid">
-        {campus.map((campus) => (
-          <div key={campus.id}  className="campDesign">
-            <CampusCard campus={campus} />
-            
+        <p>There are no campus registered in the database.</p>
+      ) : (
+        <div className="campus-grid">
+          {campus.map((campus) => (
+            <div key={campus.id} className="campDesign">
+              <CampusCard campus={campus} />
 
-            <DeleteCampus />
-
-          </div>
-        ))}
-      </div>
-    )}
+              <DeleteCampus />
+            </div>
+          ))}
+        </div>
+      )}
     </div>
-    
   );
 };
 

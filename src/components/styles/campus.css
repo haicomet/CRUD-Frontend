@@ -1,11 +1,21 @@
 .add-campus-btn {
-       
-    display: flex;
-    flex-direction: column; 
-    background-color: rgb(247, 247, 247);
-    padding: 5rem;
-    border-radius: 7px;
-    
-    width: 100%;
-    max-width: 600px; 
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 247, 247);
+  padding: 5rem;
+  border-radius: 7px;
+
+  width: 100%;
+  max-width: 600px;
+}
+
+.add-student-btn {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 247, 247);
+  padding: 5rem;
+  border-radius: 7px;
+
+  width: 100%;
+  max-width: 600px;
 }
