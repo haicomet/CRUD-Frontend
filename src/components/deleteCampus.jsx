@@ -19,6 +19,6 @@ const DeleteCampus = ( { campusId, fetchCampus }) => {
 };
 
 
-export default deleteCampus;
+export default DeleteCampus;
 
 

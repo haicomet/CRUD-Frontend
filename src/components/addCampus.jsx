@@ -16,7 +16,7 @@ useEffect(() => {
       const fetchCampus = async () => {
         try {
           const res = await axios.get(`${API_URL}/api/campus`);
-          setCampus(res.data);
+          setCampusName(res.data);
         } catch (error) {
           console.error("Error fetching campus:", error);
         }
@@ -35,6 +35,11 @@ useEffect(() => {
             description,
 
         });
+        alert("Campus created successfully!");
+        setCampusName("");
+        setImageUrl("");
+        setAddress("");
+        setDescription("");
     } catch (error) {
         console.error("Error adding campus", error);
     }

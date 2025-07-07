@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
 import axios from "axios";
+import StudentCard from "./StudentCard";
+const API_URL = process.env.API_URL || "http://localhost:8080";
 
 const SingleCampus = () => {
   const { id } = useParams(); 
   const [campus, setCampus] = useState(null);
 
   useEffect(() => {
-    axios.get(`${API_URL}/api/campuses/${id}`)
+    axios.get(`${API_URL}/api/campus/${id}`)
       .then(res => setCampus(res.data))
       .catch(err => console.error("Error fetching campus:", err));
   }, [id]);
@@ -16,8 +18,8 @@ const SingleCampus = () => {
 
   return (
     <div>
-      <h2>{campus.name}</h2>
-      <img src={campus.imageUrl} alt={campus.name} style={{ width: "300px" }} />
+      <h2>{campus.campusName}</h2>
+      <img src={campus.imageUrl} alt={campus.campusName} style={{ width: "300px" }} />
       <p><strong>Address:</strong> {campus.address}</p>
       <p>{campus.description}</p>
 
@@ -25,11 +27,7 @@ const SingleCampus = () => {
       {campus.students?.length > 0 ? (
         <ul>
           {campus.students.map(student => (
-            <li key={student.id}>
-              <Link to={`/students/${student.id}`}>
-                {student.firstName} {student.lastName}
-              </Link>
-            </li>
+            <StudentCard key={student.id} student = {student}/>
           ))}
         </ul>
       ) : (
