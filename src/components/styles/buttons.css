@@ -1,20 +1,20 @@
 .add-campus-btn {
      background-color: #9faef1; 
-  color: white; /* White text color */
-  padding: 12px 20px; /* Padding for size */
-  border: none; /* Remove default border */
-  border-radius: 8px; /* Rounded corners */
-  font-size: 16px; /* Font size */
+  color: white; 
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 8px; 
+  font-size: 16px; 
   
 }
 
 .add-student-btn {
   background-color: #9faef1; 
-  color: white; /* White text color */
-  padding: 12px 20px; /* Padding for size */
-  border: none; /* Remove default border */
-  border-radius: 8px; /* Rounded corners */
-  font-size: 16px; /* Font size */
+  color: white; 
+  padding: 12px 20px; 
+  border: none; 
+  border-radius: 8px; 
+  font-size: 16px; 
  
 }
 
