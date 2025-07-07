@@ -37,11 +37,12 @@ const AllStudents = () => {
             <StudentCard student={student} />
             <DeleteStudent
               studentId={student.id}
-              fetchStudents={fetchStudents}
-            />
+              fetchStudents={fetchStudents}/>
           </div>
         ))}
+
       </div>
+      )}
     </div>
   );
 };
