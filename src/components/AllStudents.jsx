@@ -5,6 +5,7 @@ import DeleteStudent from "./DeleteStudent";
 import StudentCard from "./StudentCard";
 const API_URL = process.env.API_URL || "http://localhost:8080";
 
+
 const AllStudents = () => {
   const [students, setStudents] = useState([]);
 
@@ -19,7 +20,7 @@ const AllStudents = () => {
     fetchStudents();
   }, []);
 
-  if 
+  
  
 
   return (
@@ -30,7 +31,7 @@ const AllStudents = () => {
       </Link>
        {students.length === 0 ? (
        <p>There are no students currently enrolled.</p>
-  ) : (
+       ) : (
       <div>
         {students.map((student) => (
           <div key={student.id}>
