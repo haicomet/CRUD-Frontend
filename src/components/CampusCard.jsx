@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./styles/allPage.css";
 
 const CampusCard = ({campus}) => {
     return(
