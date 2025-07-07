@@ -19,7 +19,8 @@ const AllCampus = () => {
 
   return (
     <div>
-      <h2>All Campus</h2>
+      
+      <h2>All Campuses</h2>
       <Link to="/add-campus" >
       <button className="add-campus-btn">Add Campus</button>
       </Link>
