@@ -27,16 +27,20 @@ const AllCampus = () => {
       {campus.length === 0 ? (
       <p>There are no campus registered in the database.</p>
     ) : (
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+      <div className="campus-grid">
         {campus.map((campus) => (
-          <div key={campus.id} >
+          <div key={campus.id}  className="campDesign">
             <CampusCard campus={campus} />
+            
+
             <DeleteCampus />
+
           </div>
         ))}
       </div>
     )}
     </div>
+    
   );
 };
 
