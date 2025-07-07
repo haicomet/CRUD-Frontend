@@ -18,7 +18,7 @@ const AllCampus = () => {
 
   return (
     <div>
-      <h2>All Campus</h2>
+      <h2></h2>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
         {campus.map((campus) => (
           <CampusCard key={campus.id} campus={campus} />

@@ -48,11 +48,39 @@ Campus form portion
 
 }
 
-.new-student-form { 
- display: flex;
-  
-       
+.add-student-container {
+    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #9faef1; 
+   
+ 
 }
+
+.h1 {
+   justify-content: center;
+ align-items: center;
+    color:#3f4664;
+    font-size: 20px;
+   
+    
+}
+
+.new-student-form { 
+    
+    display: flex;
+    flex-direction: column; 
+    background-color: rgb(247, 247, 247);
+    padding: 5rem;
+    border-radius: 7px;
+    
+    width: 100%;
+    max-width: 600px; 
+}
+
 
 
 
