@@ -21,7 +21,6 @@ const Navbar = () => {
       <Link to="/students" style={{ marginRight: "1rem" }}>
         Sign up
       </Link>
-     
     </nav>
   );
 };
