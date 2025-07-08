@@ -14,6 +14,13 @@ const Navbar = () => {
       <Link to="/students" style={{ marginRight: "1rem" }}>
         Students
       </Link>
+      {/* remember to change link for both nav bar button below */}
+      <Link to="/students" style={{ marginRight: "1rem" }}>
+        Sign In
+      </Link>
+      <Link to="/students" style={{ marginRight: "1rem" }}>
+        Sign up
+      </Link>
      
     </nav>
   );
